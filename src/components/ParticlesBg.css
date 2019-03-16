@@ -1,3 +1,5 @@
-.particles {
-    width: 500px;
+.particles canvas {
+    background: linear-gradient(120deg, rgba(23, 23, 60, 1), rgba(23, 23, 54, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    max-width: 100vw;
+    max-height: 40vh;
 }
