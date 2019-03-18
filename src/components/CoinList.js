@@ -1,7 +1,7 @@
 import React from 'react';
 import {API_BASE_URL} from '../config';
 import {API_BASE_IMAGE} from '../config';
-
+import './CoinList.css';
 
 export default class Coins extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ export default class Coins extends React.Component {
             error: null,
             loading: true
         });
-        return fetch(`${API_BASE_URL}?limit=100&tsym=USD`)
+        return fetch(API_BASE_URL)
         .then(res => {
             if(!res.ok) {
                 return Promise.reject(res.statusText);
@@ -48,7 +48,7 @@ export default class Coins extends React.Component {
     render() {
         const coins = this.state.lists.map(coin => {
             return <ul key={coin.CoinInfo.Id}>
-            <li><img className='coinImages' src={`${API_BASE_IMAGE}${coin.CoinInfo.ImageUrl}`} /></li>
+            <li><img className='coinImages' src={`${API_BASE_IMAGE}${coin.CoinInfo.ImageUrl}`} alt={coin.CoinInfo.FullName}/></li>
             <li>{coin.CoinInfo.FullName}</li>
             <li>{coin.CoinInfo.FullName}</li>
             <li>{coin.CoinInfo.FullName}</li>
