@@ -2,7 +2,7 @@
   "name": "coinscompare",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kaleidics.github.io/coinscompare",
+  "homepage": "https://coinscompare.netlify.com/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "package": "^1.0.1",
