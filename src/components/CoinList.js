@@ -57,7 +57,7 @@ export default class Coins extends React.Component {
         });
 
         return (
-        <div>
+        <div className='purse'>
             {coins}  
         </div>
         );
