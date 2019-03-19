@@ -46,13 +46,17 @@ export default class Coins extends React.Component {
     }
 
     render() {
-        const coins = this.state.lists.map(coin => {
-            return <ul key={coin.CoinInfo.Id}>
+        const coins = this.state.lists.map((coin, index) => {
+            return <ul className='coin-containers' key={coin.CoinInfo.Id}>
             <li><img className='coinImages' src={`${API_BASE_IMAGE}${coin.CoinInfo.ImageUrl}`} alt={coin.CoinInfo.FullName}/></li>
+            <li>{index+1}</li>
             <li>{coin.CoinInfo.FullName}</li>
-            <li>{coin.CoinInfo.FullName}</li>
-            <li>{coin.CoinInfo.FullName}</li>
-            <li>{coin.CoinInfo.FullName}</li>
+            <li className='ticker'>{coin.CoinInfo.Name}</li>
+            <li>{coin.DISPLAY.USD.PRICE}</li>
+            <li>{coin.DISPLAY.USD.SUPPLY}</li>
+            <li>{coin.DISPLAY.USD.MKTCAP}</li>
+            <li>24Hr</li>
+            <li>{coin.DISPLAY.USD.CHANGEPCT24HOUR}%</li>
             </ul>
         });
 
