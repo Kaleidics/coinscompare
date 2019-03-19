@@ -55,7 +55,7 @@ export default class Coins extends React.Component {
             <li>{coin.DISPLAY.USD.PRICE}</li>
             <li>{coin.DISPLAY.USD.SUPPLY}</li>
             <li>{coin.DISPLAY.USD.MKTCAP}</li>
-            <li>24Hr</li>
+            <li>24HR</li>
             <li>{coin.DISPLAY.USD.CHANGEPCT24HOUR}%</li>
             </ul>
         });
