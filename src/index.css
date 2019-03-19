@@ -9,4 +9,9 @@ body {
   background: #f3f3f3;
 }
 
-
+header {
+  width: 100vw;
+  height: 45vh;
+}
+/* font-family: 'Archivo Black', sans-serif;
+font-family: 'Montserrat', sans-serif; */
