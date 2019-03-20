@@ -10,6 +10,7 @@ export default class Coins extends React.Component {
 
         this.state = {
             lists: [],
+            loading: true,
             error: null,
         };
     }
@@ -46,15 +47,28 @@ export default class Coins extends React.Component {
             })
         });
     }
-
    
     //Map the fetch data into individual cards/uls as JSX
     render() {
-        
+        let loader = <Coin data={this.state.lists} />;
+        if(this.state.loading){
+            loader = <div className='loader'>
+                        <div class="cs-loader">
+                            <div class="cs-loader-inner">
+                                <label>&#9679; </label>
+                                <label>&#9679; </label>
+                                <label>&#9679; </label>
+                                <label>&#9679; </label>
+                                <label>&#9679; </label>
+                                <label>&#9679; </label>
+                            </div>
+                        </div>
+                    </div>
+        }
         return (
         <div className='main-container'>
             <SearchForm />
-            <Coin data={this.state.lists} />
+            {loader}
         </div>
         
         );
