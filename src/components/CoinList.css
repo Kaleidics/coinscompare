@@ -9,13 +9,6 @@
     align-items: center;
 }
 
-.main-container input {
-    width: 15%;
-    height: 35px;
-    font-size: 20px;
-    text-align: center;
-}
-
 .coinImages {
     width: 25px;
 }

@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+#search {
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+}
