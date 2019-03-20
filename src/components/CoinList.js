@@ -47,6 +47,9 @@ export default class Coins extends React.Component {
         });
     }
 
+
+
+   
     //Map the fetch data into individual cards/uls as JSX
     render() {
         const coins = this.state.lists.map((coin, index) => {
@@ -55,11 +58,16 @@ export default class Coins extends React.Component {
             )
         });
 
+
         //display the new array of mapped coins data
         return (
-        <div className='purse'>
-            {coins}  
+        <div className='main-container'>
+             <input type='text' />
+            <div className='purse'>
+                {coins}
+            </div>
         </div>
+        
         );
     }
 }
