@@ -52,7 +52,7 @@ export default class Coins extends React.Component {
    
     //Map the fetch data into individual cards/uls as JSX
     render() {
-        const displayData = this.state.lists.filter(coin => coin.CoinInfo.FullName.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
+        const displayData = this.state.lists.filter(coin => coin.CoinInfo.Name.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
         let mainDiv = <Coin data={displayData} />;
         if(this.state.loading){
             mainDiv = <Loader />
