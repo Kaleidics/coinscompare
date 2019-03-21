@@ -1,5 +1,6 @@
 import React from 'react';
 import {API_BASE_URL} from '../config';
+import Loader from './loader';
 import SearchForm from './Search-form';
 import Coin from './Coins';
 import './CoinList.css';
@@ -50,25 +51,14 @@ export default class Coins extends React.Component {
    
     //Map the fetch data into individual cards/uls as JSX
     render() {
-        let loader = <Coin data={this.state.lists} />;
+        let mainDiv = <Coin data={this.state.lists} />;
         if(this.state.loading){
-            loader = <div className='loader'>
-                        <div class="cs-loader">
-                            <div class="cs-loader-inner">
-                                <label>&#9679; </label>
-                                <label>&#9679; </label>
-                                <label>&#9679; </label>
-                                <label>&#9679; </label>
-                                <label>&#9679; </label>
-                                <label>&#9679; </label>
-                            </div>
-                        </div>
-                    </div>
+            mainDiv = <Loader />
         }
         return (
         <div className='main-container'>
             <SearchForm />
-            {loader}
+            {mainDiv}
         </div>
         
         );
