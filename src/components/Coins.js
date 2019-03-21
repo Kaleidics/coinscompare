@@ -3,6 +3,7 @@ import { API_BASE_IMAGE } from '../config';
 import './Coins.css';
 
 export default function Coin(props) {
+    
     const coins = props.data.map((coin, index) => {
         return (
             <ul className='coin-containers' index={index} key={coin.CoinInfo.Id}>

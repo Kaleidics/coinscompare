@@ -6,11 +6,12 @@ import Coin from './Coins';
 import './CoinList.css';
 
 export default class Coins extends React.Component {
+    
     constructor(props) {
         super(props);
-
         this.state = {
             lists: [],
+            searchTerm: '',
             loading: true,
             error: null,
         };
@@ -51,13 +52,14 @@ export default class Coins extends React.Component {
    
     //Map the fetch data into individual cards/uls as JSX
     render() {
-        let mainDiv = <Coin data={this.state.lists} />;
+        const displayData = this.state.lists.filter(coin => coin.CoinInfo.FullName.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
+        let mainDiv = <Coin data={displayData} />;
         if(this.state.loading){
             mainDiv = <Loader />
         }
         return (
         <div className='main-container'>
-            <SearchForm />
+            <SearchForm onChange={searchTerm => this.setState({searchTerm})} />
             {mainDiv}
         </div>
         
