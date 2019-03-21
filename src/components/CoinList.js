@@ -1,6 +1,6 @@
 import React from 'react';
 import {API_BASE_URL} from '../config';
-import Loader from './loader';
+import Loader from './Loader';
 import SearchForm from './Search-form';
 import Coin from './Coins';
 import './CoinList.css';
