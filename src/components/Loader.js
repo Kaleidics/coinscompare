@@ -4,8 +4,8 @@ import './Loader.css';
 export default function Loader() {
     return (
         <div className='loader'>
-            <div class="cs-loader">
-                <div class="cs-loader-inner">
+            <div className="cs-loader">
+                <div className="cs-loader-inner">
                     <label>&#9679; </label>
                     <label>&#9679; </label>
                     <label>&#9679; </label>

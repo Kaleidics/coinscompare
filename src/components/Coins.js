@@ -6,16 +6,16 @@ export default function Coin(props) {
     
     const coins = props.data.map((coin, index) => {
         return (
-            <ul className='coin-containers' index={index} key={coin.CoinInfo.Id}>
-                <li><img className='coinImages' src={`${API_BASE_IMAGE}${coin.CoinInfo.ImageUrl}`} alt={coin.CoinInfo.FullName} /></li>
-                <li>{index + 1}</li>
-                <li>{coin.CoinInfo.FullName}</li>
-                <li className='ticker'>{coin.CoinInfo.Name}</li>
-                <li>{coin.DISPLAY.USD.PRICE}</li>
-                <li>{coin.DISPLAY.USD.SUPPLY}</li>
-                <li>{coin.DISPLAY.USD.MKTCAP}</li>
+            <ul className='coin-containers' index={index} key={coin.Id}>
+                <li><img className='coinImages' src={`${coin.image}`} alt={coin.name} /></li>
+                <li>{coin.market_cap_rank}</li>
+                <li>{coin.name}</li>
+                <li className='ticker'>{coin.symbol}</li>
+                <li>{parseFloat(coin.current_price).toFixed(2)}</li>
+                <li>{coin.total_volume}</li>
+                <li>{coin.market_cap}</li>
                 <li>24HR</li>
-                <li>{coin.DISPLAY.USD.CHANGEPCT24HOUR}%</li>
+                <li>{coin.market_cap_change_percentage_24h}%</li>
             </ul>
         )
     });
