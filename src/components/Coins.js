@@ -1,6 +1,10 @@
 import React from 'react';
-import { API_BASE_IMAGE } from '../config';
 import './Coins.css';
+
+function tidyUp(num) {
+    let stringNum = num.toFixed(2).toString();
+    return (stringNum.replace(/\B(?=(?=\d*\.)(\d{3})+(?!\d))/g, ','));
+}
 
 export default function Coin(props) {
     
@@ -11,11 +15,11 @@ export default function Coin(props) {
                 <li>{coin.market_cap_rank}</li>
                 <li>{coin.name}</li>
                 <li className='ticker'>{coin.symbol}</li>
-                <li>{parseFloat(coin.current_price).toFixed(2)}</li>
-                <li>{coin.total_volume}</li>
-                <li>{coin.market_cap}</li>
+                <li>${tidyUp(coin.current_price)}</li>
+                <li>${tidyUp(coin.total_volume)}</li>
+                <li>${tidyUp(coin.market_cap)}</li>
                 <li>24HR</li>
-                <li>{coin.market_cap_change_percentage_24h}%</li>
+                <li>{tidyUp(coin.market_cap_change_percentage_24h)}%</li>
             </ul>
         )
     });
