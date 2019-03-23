@@ -31,3 +31,45 @@
     color: #abb7be;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media(max-width:1700px) {
+    
+    .app-title {
+        position: absolute;
+        top: 5%;
+        left: 7%;
+        color: white;
+    }
+
+    .title-h2 {
+        margin: 0;
+    }
+}
+
+@media(max-width:1300px) {
+    
+    .app-title {
+        position: absolute;
+        top: 2%;
+        left: 7%;
+        color: white;
+    }
+
+    .title-h2 {
+        margin: 0;
+    }
+}
+
+@media(max-width:1100px) {
+    
+    .app-title {
+        position: absolute;
+        top: 0%;
+        left: 7%;
+        color: white;
+    }
+
+    .title-h2 {
+        margin: 0;
+    }
+}
