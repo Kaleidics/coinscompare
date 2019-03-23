@@ -56,9 +56,18 @@ export default class Coins extends React.Component {
 
         if(this.state.searchTerm){
             displayData = displayData.filter(coin =>
-                coin.symbol.toLowerCase() === this.state.searchTerm.toLowerCase() ||
-                coin.name.toLowerCase() === this.state.searchTerm.toLowerCase()
+                coin.symbol.toLowerCase().includes(this.state.searchTerm.toLowerCase()) ||
+                coin.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
             );
+            console.log(displayData);
+            if(displayData[0].name.toLowerCase() === this.state.searchTerm) {
+                console.log('here', displayData)
+                displayData = displayData.slice(0,1);
+            }
+            // displayData = displayData.filter(coin =>
+            //     coin.symbol.toLowerCase() === this.state.searchTerm.toLowerCase() ||
+            //     coin.name.toLowerCase() === this.state.searchTerm.toLowerCase()
+            // );
         }
        
         let mainDiv = <Coin data={displayData} />;
