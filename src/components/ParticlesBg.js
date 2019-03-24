@@ -14,8 +14,10 @@ export default function ParticlesBg(props) {
             />
             <section className='app-title'>
             <h2 className='title-h2'>Coins <br/> Compare</h2>
-            <p className='title-tagline'>A quick look at imaginary money.</p>            
+            <span className='taglines'>
+            <p className='title-tagline'>A quick look at imaginary money. </p>            
             <p className='title-tagline'> Wait, all money is imaginary . . .</p>
+            </span>
             </section>
         </div>
     )

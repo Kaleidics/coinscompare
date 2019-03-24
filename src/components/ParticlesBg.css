@@ -25,6 +25,9 @@ html {
     color: white;
 }
 
+.taglines {
+    display: flex;
+}
 .title-h2 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 6rem;
@@ -32,10 +35,10 @@ html {
 }
 
 .title-tagline {
-    width: 100%;
     color: #abb7be;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
+    margin-left: 2px;
 }
 
 @media(max-width:1700px) {
@@ -52,15 +55,50 @@ html {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 768px) {
+    .title-h2 {
+        font-size: 3rem;
+    }
+
+    .title-tagline {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 900px) {
 
     .app-title {
-        top: 15%;
+        top: 10%;
     }
     .title-h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
+    }
+
+    .title-tagline {
+        font-size: 1rem;
     }
     
 }
 
+@media(max-width: 600px) {
+
+    .app-title {
+        top: 10%;
+    }
+    .title-h2 {
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media(max-width: 320px) {
+    .taglines {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-tagline {
+        margin-bottom: 0;
+    }
+}
 
