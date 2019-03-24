@@ -12,10 +12,10 @@ export default function ParticlesBg(props) {
             <Particles
                 params={particleOpt}
             />
-            <div className='app-title'>
+            <section className='app-title'>
             <h2 className='title-h2'>Coins <br/> Compare</h2>
             <p className='title-tagline'>A quick look at imaginary money. Wait, all money is imaginary . . .</p>
-            </div>
+            </section>
         </div>
     )
 }
