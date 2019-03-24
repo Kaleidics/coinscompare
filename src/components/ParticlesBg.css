@@ -1,16 +1,17 @@
 .particles {
     width: 100%;
-    /* height: 45vh; */
+    height: 100%;
 }
 
 .particles div {
     width: 100%;
+    height: 100%;;
 }
 
 .particles canvas {
     background: linear-gradient(to right bottom, rgba(23, 23, 60, 1), rgba(10, 10, 10, 1), rgba(0, 0, 0, 1));
     max-width: 100vw;
-    max-height: 40vh;
+    max-height: 100%;
 }
 
 .app-title {
