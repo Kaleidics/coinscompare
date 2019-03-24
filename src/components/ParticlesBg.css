@@ -27,12 +27,12 @@ html {
 
 .title-h2 {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 3.5rem;
+    font-size: 6rem;
     margin-bottom: 0;
 }
 
 .title-tagline {
-    width: 50%;
+    width: 100%;
     color: #abb7be;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -52,8 +52,19 @@ html {
     }
 }
 
-@media(max-width:320px) {
+@media(max-width: 600px) {
 
+    .app-title {
+        top: 15%;
+    }
+    .title-h2 {
+        font-size: 4rem;
+    }
+    
+}
+
+@media(max-width:320px) {
+    
     
 }
 
