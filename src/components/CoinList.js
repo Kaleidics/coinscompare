@@ -54,16 +54,18 @@ export default class Coins extends React.Component {
     render() {
         let displayData = [...this.state.lists];
 
+        //if user enters input, filter array and display all values matching current input
         if(this.state.searchTerm){
             displayData = displayData.filter(coin =>
                 coin.symbol.toLowerCase().includes(this.state.searchTerm.toLowerCase()) ||
                 coin.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
             );
-            console.log(displayData);
-            if(displayData[0].name.toLowerCase() === this.state.searchTerm.toLowerCase()) {
-                console.log('here', displayData)
-                displayData = displayData.slice(0,1);
-            }
+        //if user input matches exactly to a string in the array, assumes it will be first value in array, display that value
+        console.log(displayData);
+        if(displayData[0].name.toLowerCase() === this.state.searchTerm.toLowerCase()) {
+            console.log('here', displayData)
+            displayData = displayData.slice(0,1);
+        }
             // displayData = displayData.filter(coin =>
             //     coin.symbol.toLowerCase() === this.state.searchTerm.toLowerCase() ||
             //     coin.name.toLowerCase() === this.state.searchTerm.toLowerCase()
