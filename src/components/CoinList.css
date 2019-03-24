@@ -23,7 +23,7 @@
 }
 
 .coin-containers {
-    width: 17%;
+    width: 16%;
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -32,7 +32,7 @@
     align-items: center;
     border: 1px solid rgba(159, 159, 175, .15);
     border-radius: 3px;
-    margin: 1%;
+    margin: 2%;
     cursor: pointer;
 }
 
@@ -46,6 +46,22 @@
     font-size: 1.7rem;
 }
 
+@media(max-width: 768px) {
+    .coin-containers {
+        width: 24%;
+    }
+}
 
+@media(max-width: 600px) {
+    .coin-containers {
+        width: 32%;
+    }
+}
+
+@media(max-width: 320px) {
+    .coin-containers {
+        width: 49%;
+    }
+}
 
 
