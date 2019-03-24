@@ -60,7 +60,7 @@ export default class Coins extends React.Component {
                 coin.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
             );
             console.log(displayData);
-            if(displayData[0].name.toLowerCase() === this.state.searchTerm) {
+            if(displayData[0].name.toLowerCase() === this.state.searchTerm.toLowercase()) {
                 console.log('here', displayData)
                 displayData = displayData.slice(0,1);
             }
