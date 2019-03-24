@@ -39,6 +39,8 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     margin-left: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media(max-width:1700px) {
@@ -57,7 +59,7 @@ html {
 
 @media(max-width: 768px) {
     .title-h2 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .title-tagline {
@@ -71,7 +73,7 @@ html {
         top: 10%;
     }
     .title-h2 {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
 
     .title-tagline {
@@ -80,13 +82,14 @@ html {
     
 }
 
+
 @media(max-width: 600px) {
 
     .app-title {
         top: 10%;
     }
     .title-h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     
 }
