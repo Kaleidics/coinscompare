@@ -15,10 +15,3 @@ header {
   height: 45vh;
 }
 
-@media(max-width: 1200px) {
-  header {
-    /* height: 35vh; */
-  }
-}
-/* font-family: 'Archivo Black', sans-serif;
-font-family: 'Montserrat', sans-serif; */
