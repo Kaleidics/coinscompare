@@ -8,9 +8,7 @@ const particleOpt = pConfig;
 export default function ParticlesBg(props) {
     return (
         <div className='particles'>
-            <Particles
-                params={particleOpt}
-            />
+            <Particles params={particleOpt} />
             <section className='app-title'>
             <h2 className='title-h2'>Coins <br/> Compare</h2>
             <span className='taglines'>
