@@ -10,7 +10,7 @@ export default function Coin(props) {
     
     const coins = props.data.map((coin, index) => {
         return (
-            <ul className='coin-containers' index={index} key={coin.Id}>
+            <ul className='coin-containers' index={index} key={coin.id}>
                 <li><img className='coinImages' src={`${coin.image}`} alt={coin.name} /></li>
                 <li>{coin.market_cap_rank}</li>
                 <li>{coin.name}</li>
