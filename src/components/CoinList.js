@@ -35,7 +35,6 @@ export default class Coins extends React.Component {
             return res.json();
         })
         .then(coins => {
-            console.log('coins:', coins);
             this.setState({
                 lists: coins,
                 loading: false

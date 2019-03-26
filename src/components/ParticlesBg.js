@@ -4,7 +4,6 @@ import Particles from 'react-particles-js';
 import './ParticlesBg.css';
 
 const particleOpt = pConfig;
-console.log(particleOpt);
 
 export default function ParticlesBg(props) {
     return (
