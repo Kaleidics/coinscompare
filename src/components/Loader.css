@@ -1,11 +1,8 @@
 .loader {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
 }
 
-
-/*  */
 .cs-loader {
   height: 100%;
   width: 100%;
