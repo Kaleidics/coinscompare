@@ -19,7 +19,7 @@ export default function Coin(props) {
                 <li>${tidyUp(coin.total_volume)}</li>
                 <li>${tidyUp(coin.market_cap)}</li>
                 <li>24HR</li>
-                <li>{tidyUp(coin.market_cap_change_percentage_24h)}%</li>
+                <li style={{ color: coin.market_cap_change_percentage_24h >= 0 ? '#7AC27A' : '#FF6060'}}>{tidyUp(coin.market_cap_change_percentage_24h)}%</li>
             </ul>
         )
     });
