@@ -59,8 +59,9 @@ export default class Coins extends React.Component {
                 coin.symbol.toLowerCase().includes(this.state.searchTerm.toLowerCase()) ||
                 coin.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
             );
+            console.log('initial', displayData);
         //if user input matches exactly to a string in the array, assumes it will be first value in array, display that value
-            if(displayData[0].name.toLowerCase() === this.state.searchTerm.toLowerCase()) {
+            if(displayData.length > 0 && displayData[0].name.toLowerCase() === this.state.searchTerm.toLowerCase()) {
                 displayData = displayData.slice(0,1);
             }
         }
