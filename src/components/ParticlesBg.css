@@ -2,6 +2,9 @@ html {
     font-size: 10px;
 }
 
+header {
+    overflow-x: hidden;
+}
 /* main particle background */
 .particles {
     width: 100%;
