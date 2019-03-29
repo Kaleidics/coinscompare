@@ -3,7 +3,8 @@ html {
 }
 
 header {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow: hidden;
 }
 /* main particle background */
 .particles {
