@@ -16,13 +16,6 @@
     justify-content: center;
 }
 
-/* crypto symbols */
-.ticker {
-    text-transform: uppercase;
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.7rem;
-}
-
 /* media queries */
 @media(max-width: 768px) {
     .coin-containers {
