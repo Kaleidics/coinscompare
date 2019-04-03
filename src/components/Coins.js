@@ -15,7 +15,7 @@ export default function Coin(props) {
                 <li>{coin.market_cap_rank}</li>
                 <li>{coin.name}</li>
                 <li className='ticker'>{coin.symbol}</li>
-                <li>${tidyUp(coin.current_price)}</li>
+                <li className='price'>${tidyUp(coin.current_price)}</li>
                 <li>${tidyUp(coin.total_volume)}</li>
                 <li>${tidyUp(coin.market_cap)}</li>
                 <li>24HR</li>
