@@ -16,8 +16,8 @@ export default function Coin(props) {
                 <li>{coin.name}</li>
                 <li className='ticker'>{coin.symbol}</li>
                 <li className='price'>${tidyUp(coin.current_price)}</li>
-                <li>${tidyUp(coin.total_volume)}</li>
-                <li>${tidyUp(coin.market_cap)}</li>
+                <li className='totalvol'>$ {tidyUp(coin.total_volume)}</li>
+                <li>$ {tidyUp(coin.market_cap)}</li>
                 <li>24HR</li>
                 <li style={{ color: coin.market_cap_change_percentage_24h >= 0 ? '#7AC27A' : '#FF6060' }}>{(coin.market_cap_change_percentage_24h >= 0 ? '+' : '')}{tidyUp(coin.market_cap_change_percentage_24h)}%</li>
             </ul>
