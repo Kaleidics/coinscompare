@@ -17,7 +17,7 @@
     align-items: center;
     list-style-type: none;
     padding: 0;
-    margin: 2%;
+    margin: 1%;
     background-color: white;
     border: 1px solid rgba(159, 159, 175, .15);
     border-radius: 3px;
@@ -27,6 +27,14 @@
 
 .coin-containers:hover {
     box-shadow: 0 14px 28px rgba(92,151,191,0.25), 0 10px 10px rgba(92,151,191,0.22);
+}
+
+.coin-containers li {
+    margin-top: 2px;
+}
+
+.coinImages {
+    width: 25px;
 }
 
 .price {
@@ -44,6 +52,6 @@
 .ticker {
     text-transform: uppercase;
     font-family: 'Archivo Black', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
