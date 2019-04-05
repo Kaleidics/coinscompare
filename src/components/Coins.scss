@@ -1,3 +1,10 @@
+
+%bigmoney {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: goldenrod;
+}
+
 .coinImages {
     width: 25px;
 }
@@ -17,6 +24,8 @@
     align-items: center;
     list-style-type: none;
     padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 1%;
     background-color: white;
     border: 1px solid rgba(159, 159, 175, .15);
@@ -45,9 +54,16 @@
 }
 
 .totalvol {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: goldenrod;
+    @extend %bigmoney;
+}
+
+.marketcap {
+    @extend %bigmoney;
+}
+
+.hour {
+    color: #888;
+    font-weight: 500;
 }
 .ticker {
     text-transform: uppercase;
