@@ -3,7 +3,7 @@ import {API_BASE_URL} from '../config';
 import Loader from './Loader';
 import SearchForm from './Search-form';
 import Coin from './Coins';
-// import './CoinList.scss';
+import './CoinList.scss';
 
 export default class Coins extends React.Component {
     

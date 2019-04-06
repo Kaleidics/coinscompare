@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Coins.scss';
+import './Coins.scss';
 
 function tidyUp(num) {
     let stringNum = num.toFixed(2).toString();

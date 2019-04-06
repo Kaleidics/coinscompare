@@ -1,7 +1,7 @@
 import React from 'react';
 import pConfig from './particlesjs-config';
 import Particles from 'react-particles-js';
-// import './ParticlesBg.scss';
+import './ParticlesBg.scss';
 
 const particleOpt = pConfig;
 
