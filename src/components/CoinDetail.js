@@ -3,12 +3,13 @@ import CoinList from './CoinList';
 
 export default function CoinDetail(props) {
 
-   let selectedCoin = Object.keys(props.marketData)
-
+   const coin = Object.keys(props.marketData);
     return (
         <div>
             <button onClick={props.goBack}>go back</button>
-            {selectedCoin}
+            <li>{typeof props.marketData}</li>
+            <li>{props.marketData.ripple.id}</li>
+            <li>{props.marketData.coin[0].id}</li>
         </div>
     )
 }
