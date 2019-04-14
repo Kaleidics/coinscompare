@@ -59,19 +59,19 @@ export default class Coins extends React.Component {
         const id = this.state.lists.findIndex(coin => coin.id === coinId);
         const previous = this.state.lists[id - 1];
         const next = this.state.lists[id + 1];
-        const validIds = [previous.id, coinId, next.id];
+        const validIds = [coinId];
         const newCoins = this.state.lists.filter(coin => {
-            return validIds.includes(coin.id);
+        return validIds.includes(coin.id);
     
         });
         console.log(newCoins);
         this.setState({
             lists: newCoins
-        })
+        });
         console.log(id);
       
         const fn = this.fetchCoinData;
-        Promise.all([fn(previous.id), fn(coinId), fn(next.id)]);
+        Promise.all([fn(coinId), fn(previous), fn(next)]);
     }
 
     fetchCoinData(id) {

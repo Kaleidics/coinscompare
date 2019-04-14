@@ -3,16 +3,12 @@ import CoinList from './CoinList';
 
 export default function CoinDetail(props) {
 
-    const rawcoins = [];
+   let selectedCoin = Object.keys(props.marketData)
 
-    for(let key in props.marketData) {
-        rawcoins.push(key);
-    }
-
-    const coins = rawcoins.map((coin) => {
-        return(<li>{coin}</li>)
-    })
     return (
-        <div><button onClick={props.goBack}>go back</button>{coins}</div>
+        <div>
+            <button onClick={props.goBack}>go back</button>
+            {selectedCoin}
+        </div>
     )
 }
