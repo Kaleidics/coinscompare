@@ -14,7 +14,10 @@ export default class Coins extends React.Component {
             searchTerm: '',
             loading: true,
             error: null,
+            marketData: {}
         };
+        this.moreData = this.moreData.bind(this);
+        this.fetchCoinData = this.fetchCoinData.bind(this);
     }
     //lifecycle method to call loadCoins when Coins component is displayed?
     componentDidMount() {
@@ -48,7 +51,41 @@ export default class Coins extends React.Component {
             })
         });
     }
-   
+    
+    moreData(coinId) {
+        console.log(coinId);
+        const id = this.state.lists.findIndex(coin => coin.id === coinId);
+        const previous = this.state.lists[id - 1];
+        const next = this.state.lists[id + 1];
+        const validIds = [previous.id, coinId, next.id];
+        const newCoins = this.state.lists.filter(coin => {
+            return validIds.includes(coin.id);
+    
+        });
+        console.log(newCoins);
+        this.setState({
+            lists: newCoins
+        })
+        console.log(id);
+      
+        const fn = this.fetchCoinData;
+        Promise.all([fn(previous.id), fn(coinId), fn(next.id)]);
+    }
+
+    fetchCoinData(id) {
+        const self = this;
+        fetch(`https://nameless-garden-17654.herokuapp.com/${id}`)
+            .then(res => res.json())
+            .then(response => {
+                console.log(response);
+                const coinData = {};
+                coinData[response.id] = response;
+                const newMarketData = Object.assign(coinData, self.state.marketData);
+                self.setState({
+                    marketData: newMarketData
+                });
+            });
+    }
     //Map the fetch data into individual cards/uls as JSX
     render() {
         let displayData = [...this.state.lists];
@@ -66,7 +103,7 @@ export default class Coins extends React.Component {
             }
         }
        
-        let mainDiv = <Coin data={displayData} />;
+        let mainDiv = <Coin data={displayData} handler={this.moreData}/>;
         if(this.state.loading){
             mainDiv = <Loader />
         }
