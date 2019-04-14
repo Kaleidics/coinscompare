@@ -3,6 +3,7 @@ import {API_BASE_URL} from '../config';
 import Loader from './Loader';
 import SearchForm from './Search-form';
 import Coin from './Coins';
+import CoinDetail from './CoinDetail'
 import './CoinList.scss';
 
 export default class Coins extends React.Component {
@@ -28,7 +29,8 @@ export default class Coins extends React.Component {
     loadCoins() {
         this.setState({
             error: null,
-            loading: true
+            loading: true,
+            marketData: {}
         });
         return fetch(API_BASE_URL)
         .then(res => {
@@ -107,10 +109,18 @@ export default class Coins extends React.Component {
         if(this.state.loading){
             mainDiv = <Loader />
         }
+
+        let backButton = <CoinDetail marketData={this.state.marketData} goBack={() => this.loadCoins()} />;
+        if (Object.keys(this.state.marketData).length === 0 && (this.state.marketData).constructor === Object) {
+            backButton = undefined;
+        }
         return (
         <div className='main-container'>
+            
             <SearchForm onChange={searchTerm => this.setState({searchTerm})} />
             {mainDiv}
+            {backButton}
+            
         </div>
         
         );
