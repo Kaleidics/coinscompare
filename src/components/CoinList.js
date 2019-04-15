@@ -6,6 +6,7 @@ import Coin from './Coins';
 import CoinDetail from './CoinDetail'
 import './CoinList.scss';
 
+
 export default class Coins extends React.Component {
     
     constructor(props) {
@@ -66,7 +67,7 @@ export default class Coins extends React.Component {
         });
         console.log(newCoins);
         this.setState({
-            lists: newCoins
+            lists: []
         });
         console.log(id);
       
