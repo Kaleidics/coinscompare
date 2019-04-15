@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 export default function Graph(props) {
 
@@ -6,11 +7,18 @@ export default function Graph(props) {
     for(let i=0; i<280; i+=10) {
         graphData.push(props.marketData.undefined.prices[i])
     }
+    
+
+    const data = graphData.map((index, key) => {
+        return (
+            <li key={key}><Moment>{new Date(graphData[key][0])}</Moment> / {graphData[key][1]}</li>
+        )
+    });
 
     return(
         <div>
-            <h2>Graph</h2>
-            <li>{graphData[0]}</li>
+            <h2>Graph Work in Progress</h2>
+            {data}
         </div>
     )
 }
