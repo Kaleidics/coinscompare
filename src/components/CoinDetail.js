@@ -9,8 +9,7 @@ export default function CoinDetail(props) {
     return (
         <div>
             <button onClick={props.goBack}>go back</button>
-            <li>{props.marketData[coin[0]].id}</li>
-            <Graph />
+            <Graph marketData={props.marketData}/>
         </div>
     )
 }

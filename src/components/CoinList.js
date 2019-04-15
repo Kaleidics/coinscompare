@@ -67,7 +67,7 @@ export default class Coins extends React.Component {
         });
         console.log(newCoins);
         this.setState({
-            lists: []
+            lists: newCoins
         });
         console.log(id);
       
@@ -77,7 +77,7 @@ export default class Coins extends React.Component {
 
     fetchCoinData(id) {
         const self = this;
-        fetch(`https://nameless-garden-17654.herokuapp.com/${id}`)
+        fetch(`https://nameless-garden-17654.herokuapp.com/price_data/${id}`)
             .then(res => res.json())
             .then(response => {
                 console.log(response);
