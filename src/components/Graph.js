@@ -1,24 +1,48 @@
 import React from 'react';
 import Moment from 'react-moment';
+import {Line} from 'react-chartjs-2';
 
-export default function Graph(props) {
+export default class Graph extends React.Component{
+    constructor(props){
+        super(props);
 
-    const graphData = [];
-    for(let i=0; i<280; i+=10) {
-        graphData.push(props.marketData.undefined.prices[i])
+        this.state = {
+            marketData: props.marketData,
+            chartData:{
+                labels: [],
+                datasets: [
+                    {
+                        label: 'Price',
+                        data:props.priceData,
+                        backgroundColor:[
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)'
+                        ]
+                    }
+                ]
+            }
+        }
     }
-    
 
-    const data = graphData.map((index, key) => {
+
+    render(){
+
+      
         return (
-            <li key={key}><Moment>{new Date(graphData[key][0])}</Moment> / {graphData[key][1]}</li>
+            <div>
+                <h2>Graph Work in Progress</h2>
+                <Line
+                    data={this.state.chartData}
+                    width={100}
+                    height={50}
+                    options={{ maintainAspectRatio: false }}
+                />
+            </div>
         )
-    });
-
-    return(
-        <div>
-            <h2>Graph Work in Progress</h2>
-            {data}
-        </div>
-    )
+    }
+   
 }

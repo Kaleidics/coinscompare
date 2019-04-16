@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://coinscompare.netlify.com/",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "gh-pages": "^2.0.1",
@@ -11,6 +12,7 @@
     "node-sass": "^4.11.0",
     "package": "^1.0.1",
     "react": "^16.8.4",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-moment": "^0.9.2",
     "react-particles-js": "^2.4.2",
