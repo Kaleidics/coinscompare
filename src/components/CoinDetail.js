@@ -18,11 +18,17 @@ export default function CoinDetail(props) {
         )
     });
 
+    const timeData = graphData.map((index, key) => {
+        return (
+            new Date(graphData[key][0])
+        )
+    });
+
    const coin = Object.keys(props.marketData);
     return (
         <div>
             <button onClick={props.goBack}>go back</button>
-            <Graph marketData={props.marketData} priceData={data}/>
+            <Graph marketData={props.marketData} timeData={timeData} priceData={data}/>
         </div>
     )
 }

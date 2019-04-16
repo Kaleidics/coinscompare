@@ -1,6 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
-import {Line} from 'react-chartjs-2';
+import {Line, Bar} from 'react-chartjs-2';
 
 export default class Graph extends React.Component{
     constructor(props){
@@ -9,18 +9,44 @@ export default class Graph extends React.Component{
         this.state = {
             marketData: props.marketData,
             chartData:{
-                labels: [],
+                labels: props.timeData,
                 datasets: [
                     {
                         label: 'Price',
-                        data:props.priceData,
+                        fill: false,
+                        data: props.priceData,
                         backgroundColor:[
                             'rgba(66, 66, 66, 1)',
                             'rgba(66, 66, 66, 1)',
                             'rgba(66, 66, 66, 1)',
                             'rgba(66, 66, 66, 1)',
                             'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)'
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
+                            'rgba(66, 66, 66, 1)',
                         ]
                     }
                 ]
@@ -28,17 +54,22 @@ export default class Graph extends React.Component{
         }
     }
 
-
     render(){
 
-      
+      const listData = this.props.priceData.map((index, key) => {
+          return(
+              <li key={key}>{this.props.priceData[key]}</li>
+          )
+      });
+
         return (
             <div>
                 <h2>Graph Work in Progress</h2>
+                <ul>{listData}</ul>
                 <Line
                     data={this.state.chartData}
-                    width={100}
-                    height={50}
+                    width={1000}
+                    height={100}
                     options={{ maintainAspectRatio: false }}
                 />
             </div>
