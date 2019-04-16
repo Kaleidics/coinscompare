@@ -14,6 +14,13 @@ export default class Graph extends React.Component{
                     {
                         label: 'Price',
                         fill: false,
+                        borderColor: "#bae755",
+                        borderDash: [5, 5],
+                        backgroundColor: "#e755ba",
+                        pointBackgroundColor: "#55bae7",
+                        pointBorderColor: "#55bae7",
+                        pointHoverBackgroundColor: "#55bae7",
+                        pointHoverBorderColor: "#55bae7",
                         data: props.priceData,
                         backgroundColor:[
                             'rgba(66, 66, 66, 1)',
