@@ -59,6 +59,11 @@ export default class Graph extends React.Component{
                                     display: false
                                 }]
                             },
+                            layout: {
+                                padding: {
+                                    right: 10
+                                }
+                            }
                         }
                     }
                 />
