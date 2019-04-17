@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import {Line, Bar} from 'react-chartjs-2';
+import './Graph.scss';
 
 export default class Graph extends React.Component{
     constructor(props){
@@ -45,10 +46,12 @@ export default class Graph extends React.Component{
                 <Line
                     data={this.state.chartData}
                     width={1000}
-                    height={100}
+                    height={500}
                     options={
                         {
-                            maintainAspectRatio: false,
+                            maintainAspectRatio: true,
+                            responsive: true,
+                            aspectRatio: 2
                         }
                     }
                 />

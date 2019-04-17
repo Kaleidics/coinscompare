@@ -28,7 +28,7 @@ export default function CoinDetail(props) {
     return (
         <div>
             <button onClick={props.goBack}>Go back</button>
-            <Graph marketData={props.marketData} timeData={timeData} priceData={data}/>
+            <Graph className='graph' marketData={props.marketData} timeData={timeData} priceData={data}/>
         </div>
     )
 }
