@@ -14,3 +14,21 @@
     padding: 8px;
     cursor: pointer;
 }
+
+@media(max-width: 768px) {
+    .backbutton {
+        width: 24%;
+    }
+}
+
+@media(max-width: 600px) {
+    .backbutton {
+        width: 40%;
+    }
+}
+
+@media(max-width: 320px) {
+    .backbutton {
+        width: 70%;
+    }
+}
