@@ -18,6 +18,8 @@ export default class Graph extends React.Component{
                         borderColor: "#bae755",
                         borderDash: [5, 5],
                         backgroundColor: "#e755ba",
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
                         pointBackgroundColor: "#55bae7",
                         pointBorderColor: "#55bae7",
                         pointHoverBackgroundColor: "#55bae7",

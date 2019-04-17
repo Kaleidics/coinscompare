@@ -18,6 +18,7 @@ export default class Coins extends React.Component {
             error: null,
             marketData: {}
         };
+        this.loadCoins = this.loadCoins.bind(this);
         this.moreData = this.moreData.bind(this);
         this.fetchCoinData = this.fetchCoinData.bind(this);
     }
@@ -111,14 +112,19 @@ export default class Coins extends React.Component {
             mainDiv = <Loader />
         }
 
-        let coinResults = <CoinDetail marketData={this.state.marketData} goBack={() => this.loadCoins()} />;
+        let coinResults = <CoinDetail marketData={this.state.marketData} />;
         if (Object.keys(this.state.marketData).length === 0 && (this.state.marketData).constructor === Object) {
             coinResults = undefined;
+        }
+
+        let searchOrBack = <SearchForm onChange={searchTerm => this.setState({ searchTerm })} />;
+        if (Object.keys(this.state.marketData).length !== 0 && this.state.marketData.constructor === Object) {
+            searchOrBack = <button className='backbutton' onClick={this.loadCoins}>Go back</button>;
         }
         return (
         <div className='main-container'>
             
-            <SearchForm onChange={searchTerm => this.setState({searchTerm})} />
+            {searchOrBack}
             {mainDiv}
             {coinResults}
             
