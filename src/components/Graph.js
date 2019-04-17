@@ -12,7 +12,7 @@ export default class Graph extends React.Component{
                 labels: props.timeData,
                 datasets: [
                     {
-                        label: 'Price',
+                        label: 'Price in USD',
                         fill: false,
                         borderColor: "#bae755",
                         borderDash: [5, 5],
@@ -23,37 +23,7 @@ export default class Graph extends React.Component{
                         pointHoverBorderColor: "#55bae7",
                         data: props.priceData,
                         backgroundColor:[
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
-                            'rgba(66, 66, 66, 1)',
+                            '#55bae7'
                         ]
                     }
                 ]
@@ -72,12 +42,15 @@ export default class Graph extends React.Component{
         return (
             <div>
                 <h2>Graph Work in Progress</h2>
-                <ul>{listData}</ul>
                 <Line
                     data={this.state.chartData}
                     width={1000}
                     height={100}
-                    options={{ maintainAspectRatio: false }}
+                    options={
+                        {
+                            maintainAspectRatio: false,
+                        }
+                    }
                 />
             </div>
         )

@@ -27,7 +27,7 @@ export default function CoinDetail(props) {
    const coin = Object.keys(props.marketData);
     return (
         <div>
-            <button onClick={props.goBack}>go back</button>
+            <button onClick={props.goBack}>Go back</button>
             <Graph marketData={props.marketData} timeData={timeData} priceData={data}/>
         </div>
     )

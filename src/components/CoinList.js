@@ -111,16 +111,16 @@ export default class Coins extends React.Component {
             mainDiv = <Loader />
         }
 
-        let backButton = <CoinDetail marketData={this.state.marketData} goBack={() => this.loadCoins()} />;
+        let coinResults = <CoinDetail marketData={this.state.marketData} goBack={() => this.loadCoins()} />;
         if (Object.keys(this.state.marketData).length === 0 && (this.state.marketData).constructor === Object) {
-            backButton = undefined;
+            coinResults = undefined;
         }
         return (
         <div className='main-container'>
             
             <SearchForm onChange={searchTerm => this.setState({searchTerm})} />
             {mainDiv}
-            {backButton}
+            {coinResults}
             
         </div>
         
