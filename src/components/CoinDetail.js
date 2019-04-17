@@ -1,6 +1,7 @@
 import React from 'react';
 import CoinList from './CoinList';
 import Graph from './Graph';
+import './CoinDetail.scss';
 
 
 export default function CoinDetail(props) {
@@ -26,8 +27,8 @@ export default function CoinDetail(props) {
 
    const coin = Object.keys(props.marketData);
     return (
-        <div>
-            <button onClick={props.goBack}>Go back</button>
+        <div className='chart-outer-container'>
+            <button className='backbutton' onClick={props.goBack}>Go back</button>
             <Graph className='graph' marketData={props.marketData} timeData={timeData} priceData={data}/>
         </div>
     )

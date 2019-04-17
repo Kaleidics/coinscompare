@@ -1,0 +1,15 @@
+.chart-outer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.backbutton {
+    color: white;
+    background: #17173c;
+    width: 20%;
+    align-self: center;
+    border: 1px solid #17173c;
+    padding: 8px;
+    cursor: pointer;
+}

@@ -8,7 +8,7 @@ export default class Graph extends React.Component{
         super(props);
 
         this.state = {
-            marketData: props.marketData,
+            marketData: [props.marketData],
             chartData:{
                 labels: props.timeData,
                 datasets: [
@@ -41,8 +41,8 @@ export default class Graph extends React.Component{
       });
 
         return (
-            <div>
-                <h2>Graph Work in Progress</h2>
+            <div className='graph-inner-container'>
+                <h2 className='graphName'>Price Change in last 24 Hours</h2>
                 <Line
                     data={this.state.chartData}
                     width={1000}
@@ -51,7 +51,12 @@ export default class Graph extends React.Component{
                         {
                             maintainAspectRatio: true,
                             responsive: true,
-                            aspectRatio: 2
+                            aspectRatio: 2,
+                            scales:{
+                                xAxes:[{
+                                    display: false
+                                }]
+                            },
                         }
                     }
                 />
