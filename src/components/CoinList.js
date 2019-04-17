@@ -16,8 +16,10 @@ export default class Coins extends React.Component {
             searchTerm: '',
             loading: true,
             error: null,
+            results: false,
             marketData: {}
         };
+        this.backbutton = this.backbutton.bind(this);
         this.loadCoins = this.loadCoins.bind(this);
         this.moreData = this.moreData.bind(this);
         this.fetchCoinData = this.fetchCoinData.bind(this);
@@ -27,6 +29,19 @@ export default class Coins extends React.Component {
         this.loadCoins();
     }
 
+    //Just to show off the loader animation in case user browser has cached the json response
+    sleeper(ms) {
+    return function (x) {
+        return new Promise(resolve => setTimeout(() => resolve(x), ms));
+    };
+    }
+
+    backbutton(){
+        this.loadCoins();
+        this.setState({
+            results: false
+        });
+    }
     //Data fetch from Coins API
     loadCoins() {
         this.setState({
@@ -41,13 +56,16 @@ export default class Coins extends React.Component {
             }
             return res.json();
         })
+        .then(
+            this.sleeper(1000)
+        )
         .then(coins => {
+            
             this.setState({
                 lists: coins,
                 loading: false
-            })
-        }
-        )
+            });
+        })
         .catch(err => {
             this.setState({
                 error: 'Could not load coins',
@@ -68,7 +86,8 @@ export default class Coins extends React.Component {
         });
         console.log(newCoins);
         this.setState({
-            lists: newCoins
+            lists: newCoins,
+            results: true
         });
         console.log(id);
       
@@ -118,8 +137,8 @@ export default class Coins extends React.Component {
         }
 
         let searchOrBack = <SearchForm onChange={searchTerm => this.setState({ searchTerm })} />;
-        if (Object.keys(this.state.marketData).length !== 0 && this.state.marketData.constructor === Object) {
-            searchOrBack = <button className='backbutton' onClick={this.loadCoins}>Go back</button>;
+        if (this.state.results === true) {
+            searchOrBack = <button className='backbutton' onClick={this.backbutton}>Go back</button>;
         }
         return (
         <div className='main-container'>
