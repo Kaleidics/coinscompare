@@ -47,7 +47,8 @@ export default class Coins extends React.Component {
         this.setState({
             error: null,
             loading: true,
-            marketData: {}
+            marketData: {},
+            searchTerm: ''
         });
         return fetch(API_BASE_URL)
         .then(res => {
