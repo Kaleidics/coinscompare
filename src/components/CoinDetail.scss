@@ -30,19 +30,31 @@
 }
 
 @media(max-width: 768px) {
-    .backbutton, .buyButton {
+    .backbutton {
         width: 24%;
+    }
+
+    .buyButton {
+        width: 20%;
     }
 }
 
 @media(max-width: 600px) {
-    .backbutton, .buyButton {
+    .backbutton {
         width: 40%;
+    }
+
+    .buyButton {
+        width: 36%;
     }
 }
 
 @media(max-width: 320px) {
-    .backbutton, .buyButton {
+    .backbutton {
         width: 70%;
+    }
+
+    .buyButton {
+        width: 66%;
     }
 }
