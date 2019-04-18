@@ -28,6 +28,7 @@ export default function CoinDetail(props) {
    const coin = Object.keys(props.marketData);
     return (
         <div className='chart-outer-container'>
+            <a className='buyButton' href={'https://www.coinmama.com/buy/'+ props.coinId[0].id} target="_blank">Buy Now</a>
             <Graph className='graph' marketData={props.marketData} timeData={timeData} priceData={data}/>
         </div>
     )

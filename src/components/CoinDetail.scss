@@ -15,6 +15,20 @@
     cursor: pointer;
 }
 
+.buyButton {
+    font-size: 1.3rem;
+    color: white;
+    background-color: #facc6b;
+    background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
+    width: 15%;
+    align-self: center;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
 @media(max-width: 768px) {
     .backbutton {
         width: 24%;

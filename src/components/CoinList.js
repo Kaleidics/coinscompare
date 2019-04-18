@@ -132,7 +132,7 @@ export default class Coins extends React.Component {
             mainDiv = <Loader />
         }
 
-        let coinResults = <CoinDetail marketData={this.state.marketData} />;
+        let coinResults = <CoinDetail marketData={this.state.marketData} coinId={this.state.lists} />;
         if (Object.keys(this.state.marketData).length === 0 && (this.state.marketData).constructor === Object) {
             coinResults = undefined;
         }
