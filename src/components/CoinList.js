@@ -105,6 +105,8 @@ export default class Coins extends React.Component {
                 const coinData = {};
                 coinData[response.id] = response;
                 const newMarketData = Object.assign(coinData, self.state.marketData);
+                console.log("coindata", coinData);
+                console.log("newmarket", newMarketData);
                 self.setState({
                     marketData: newMarketData
                 });

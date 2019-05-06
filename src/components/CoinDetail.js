@@ -8,7 +8,7 @@ export default function CoinDetail(props) {
 
 
     const graphData = [];
-    for (let i = 0; i < 280; i += 10) {
+    for (let i = 0; i < props.marketData.undefined.prices.length; i += 10) {
         graphData.push(props.marketData.undefined.prices[i])
     }
 
