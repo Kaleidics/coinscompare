@@ -1,6 +1,5 @@
 import React from 'react';
-import Moment from 'react-moment';
-import {Line, Bar} from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import './Graph.scss';
 
 export default class Graph extends React.Component{

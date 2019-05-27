@@ -76,7 +76,7 @@ export default class Coins extends React.Component {
     }
     
     moreData(coinId) {
-        console.log(coinId);
+        
         const id = this.state.lists.findIndex(coin => coin.id === coinId);
         const previous = this.state.lists[id - 1];
         const next = this.state.lists[id + 1];
@@ -85,12 +85,11 @@ export default class Coins extends React.Component {
         return validIds.includes(coin.id);
     
         });
-        console.log(newCoins);
+        
         this.setState({
             lists: newCoins,
             results: true
         });
-        console.log(id);
       
         const fn = this.fetchCoinData;
         Promise.all([fn(coinId), fn(previous), fn(next)]);
@@ -101,12 +100,10 @@ export default class Coins extends React.Component {
         fetch(`https://nameless-garden-17654.herokuapp.com/price_data/${id}`)
             .then(res => res.json())
             .then(response => {
-                console.log(response);
                 const coinData = {};
                 coinData[response.id] = response;
                 const newMarketData = Object.assign(coinData, self.state.marketData);
-                console.log("coindata", coinData);
-                console.log("newmarket", newMarketData);
+
                 self.setState({
                     marketData: newMarketData
                 });
