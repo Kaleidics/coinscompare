@@ -1,7 +1,7 @@
 export default {
   "particles": {
     "number": {
-      "value": 122,
+      "value": 142,
       "density": {
         "enable": true,
         "value_area": 1200
@@ -11,7 +11,7 @@ export default {
       "value": "#ffffff"
     },
     "shape": {
-      "type": "image",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -20,7 +20,7 @@ export default {
         "nb_sides": 5
       },
       "image": {
-        "src": "https://i.imgur.com/xR8L0Y9.png",
+        "src": "img/github.svg",
         "width": 100,
         "height": 100
       }
@@ -36,11 +36,11 @@ export default {
       }
     },
     "size": {
-      "value": 10,
-      "random": false,
+      "value": 3,
+      "random": true,
       "anim": {
         "enable": false,
-        "speed": 5,
+        "speed": 40,
         "size_min": 0.1,
         "sync": false
       }
