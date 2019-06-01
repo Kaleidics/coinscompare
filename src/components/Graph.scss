@@ -3,14 +3,13 @@
 }
 
 .graph-inner-container {
-    width: 50%;
-    margin: 0 auto;
-    padding-bottom: 5vh;
+    width: 25%;
+    margin-bottom: 5vh;
 }
 
 @media(max-width: 768px) {
     .graph-inner-container {
         width: 98%;
     }
-
+    
 }

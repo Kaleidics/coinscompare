@@ -16,7 +16,6 @@ export default class Graph extends React.Component{
                         fill: false,
                         borderColor: "#bae755",
                         borderDash: [5, 5],
-                        backgroundColor: "#e755ba",
                         pointRadius: 4,
                         pointHoverRadius: 6,
                         pointBackgroundColor: "#55bae7",
@@ -35,19 +34,13 @@ export default class Graph extends React.Component{
 
     render(){
 
-      const listData = this.props.priceData.map((index, key) => {
-          return(
-              <li key={key}>{this.props.priceData[key]}</li>
-          )
-      });
-
         return (
             <div className='graph-inner-container'>
-                <h2 className='graphName'>Price Change in last 24 Hours</h2>
+                <h2 className='graphName'>{this.props.graphname}</h2>
                 <Line
                     data={this.state.chartData}
-                    width={1000}
-                    height={500}
+                    width={900}
+                    height={450}
                     options={
                         {
                             maintainAspectRatio: true,

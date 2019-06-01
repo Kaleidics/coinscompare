@@ -1,35 +1,40 @@
 .chart-outer-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .backbutton {
-    color: white;
-    background: #17173c;
     width: 15%;
     align-self: center;
+    color: white;
+    background: #17173c;
     border: 1px solid #17173c;
     padding: 8px;
     cursor: pointer;
 }
 
 .buyButton {
-    font-size: 1.3rem;
-    color: white;
-    background-color: #facc6b;
-    background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
     width: 15%;
     align-self: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    background-color: #facc6b;
+    background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
     border: none;
     padding: 8px;
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
 }
 
 @media(max-width: 768px) {
+
+    .chart-outer-container {
+        flex-direction: column;
+    }
+    
     .backbutton {
         width: 24%;
     }
