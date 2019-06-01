@@ -78,8 +78,8 @@ export default class Coins extends React.Component {
     moreData(coinId) {
         
         const id = this.state.lists.findIndex(coin => coin.id === coinId);
-        const previous = this.state.lists[id - 1];
-        const next = this.state.lists[id + 1];
+        // const previous = this.state.lists[id - 1];
+        // const next = this.state.lists[id + 1];
         const validIds = [coinId];
         const newCoins = this.state.lists.filter(coin => {
         return validIds.includes(coin.id);
@@ -93,7 +93,8 @@ export default class Coins extends React.Component {
         
         //originally to grab data for adjacent coins not used now
         const fn = this.fetchCoinData;
-        Promise.all([fn(coinId), fn(previous), fn(next)]);
+        // Promise.all([fn(coinId), fn(previous), fn(next)]);
+        fn(coinId);
     }
 
     fetchCoinData(id) {
