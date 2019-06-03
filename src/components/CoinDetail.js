@@ -19,7 +19,7 @@ export default function CoinDetail(props) {
     }
     
     const graphMonth = [];
-    for (let i = 0; i < rawData; i += (Math.floor((rawData / 24) * 6))) {
+    for (let i = 0; i < rawData; i += 1) {
         graphMonth.push(props.marketData.undefined.prices[i])
     }
 
@@ -63,9 +63,9 @@ export default function CoinDetail(props) {
     return (
         <div className='chart-outer-container'>
             {/* <a className='buyButton' href={'https://www.coinmama.com/buy/' + props.coinId[0].id} target="_blank" rel="noopener noreferrer">Buy Now</a> */}
-            <Graph className='graph' graphname={"Price Change in last 24 Hours"} marketData={props.marketData} timeData={dayTimes} priceData={dayPrices}/>
-            <Graph className='graph' graphname={"Price Change in last 7 Days"} marketData={props.marketData} timeData={weekTimes} priceData={weekPrices}/>
-            <Graph className='graph' graphname={"Price Change in last 30 Days"} marketData={props.marketData} timeData={monthTimes} priceData={monthPrices}/>
+            <Graph className='graph' graphname={"Price Change in last 24 Hours"} marketData={props.marketData} timeData={dayTimes} priceData={dayPrices} pointSize={3}/>
+            <Graph className='graph' graphname={"Price Change in last 7 Days"} marketData={props.marketData} timeData={weekTimes} priceData={weekPrices} pointSize={3}/>
+            <Graph className='graph' graphname={"Price Change in last 30 Days"} marketData={props.marketData} timeData={monthTimes} priceData={monthPrices} pointSize={0}/>
         </div>
     )
 }
