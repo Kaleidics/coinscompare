@@ -16,7 +16,7 @@ export default class SingleCoin extends React.Component {
         const coin = this.props.coin;
         
         return (
-            <ul className="coin-containers" index={this.props.index} key={coin.id} onClick={() => this.props.onClick(coin.id)}>
+            <ul className="coin-containers" index={this.props.index} onClick={() => this.props.onClick(coin.id)}>
                 <li>
                     <img className="coinImages" src={`${coin.image}`} alt={coin.name} />
                 </li>

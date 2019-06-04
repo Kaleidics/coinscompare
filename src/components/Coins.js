@@ -6,7 +6,7 @@ export default function Coin(props) {
     
     const coins = props.data.map((coin, index) => {
 
-        return <SingleCoin coin={coin} index={index} onClick={() => props.handler(coin.id)} />;
+        return <SingleCoin coin={coin} index={index} key={coin.id} onClick={() => props.handler(coin.id)} />;
     });
 
     return (
