@@ -9,7 +9,7 @@
     "enzyme-adapter-react-16": "^1.11.2",
     "gh-pages": "^2.0.1",
     "moment-timezone": "^0.5.23",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "package": "^1.0.1",
     "react": "^16.8.4",
     "react-chartjs-2": "^2.7.6",
